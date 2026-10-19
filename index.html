@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, viewport-fit=cover">
+		<meta name="theme-color" content="#000000">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="apple-mobile-web-app-title" content="NULL CITI">
+		<link rel="manifest" href="game.webmanifest">
 		<title>NULL CITI</title>
 		<style>
 html, body, #canvas {
@@ -11,11 +17,45 @@ html, body, #canvas {
 	border: 0;
 }
 
+html {
+	padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+	overscroll-behavior: none;
+}
+
 body {
+	position: fixed;
+	inset: 0;
 	color: white;
 	background-color: black;
 	overflow: hidden;
 	touch-action: none;
+}
+
+#ios-install-hint {
+	position: fixed;
+	z-index: 2;
+	top: max(12px, env(safe-area-inset-top, 0px));
+	left: max(12px, env(safe-area-inset-left, 0px));
+	right: max(12px, env(safe-area-inset-right, 0px));
+	width: fit-content;
+	max-width: 480px;
+	margin: 0 auto;
+	padding: 12px;
+	border: 1px solid #587084;
+	border-radius: 8px;
+	background: #111923;
+	font: 14px/1.5 system-ui, sans-serif;
+}
+
+#ios-install-hint:not([hidden]) { display: flex; align-items: center; gap: 12px; }
+#ios-install-hint button {
+	min-width: 44px;
+	min-height: 44px;
+	border: 1px solid #587084;
+	border-radius: 4px;
+	background: #243447;
+	color: white;
+	font: inherit;
 }
 
 #canvas {
@@ -113,19 +153,26 @@ body {
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
 		</div>
+		<aside id="ios-install-hint" hidden aria-label="아이폰 전체 화면 실행 안내">
+			<span><strong>주소창 없이 플레이</strong><br>Safari 공유 → 홈 화면에 추가 → 추가한 아이콘으로 실행<br>‘웹 앱으로 열기’가 보이면 켜 주세요.</span>
+			<button type="button" id="dismiss-install-hint" aria-label="전체 화면 안내 닫기">닫기</button>
+		</aside>
 
 		<script src="index.js"></script>
 <script src="public-pack-loader.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":617716044,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":617820940,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
 // Fill the visible area while keeping the game's logical UI at least 1152 x 648.
 function fitGameCanvas() {
 	const viewport = window.visualViewport;
-	const width = viewport ? viewport.width : window.innerWidth;
-	const height = viewport ? viewport.height : window.innerHeight;
+	const safe = getComputedStyle(document.documentElement);
+	const left = parseFloat(safe.paddingLeft) || 0, right = parseFloat(safe.paddingRight) || 0;
+	const top = parseFloat(safe.paddingTop) || 0, bottom = parseFloat(safe.paddingBottom) || 0;
+	const width = (viewport ? viewport.width : window.innerWidth) - left - right;
+	const height = (viewport ? viewport.height : window.innerHeight) - top - bottom;
 	if (width <= 0 || height <= 0) return;
 	const scale = Math.min(width / 1152, height / 648);
 	const canvas = document.getElementById('canvas');
@@ -135,34 +182,60 @@ function fitGameCanvas() {
 	const style = canvas.style;
 	style.setProperty('--game-width', `${width}px`);
 	style.setProperty('--game-height', `${height}px`);
-	style.setProperty('--game-left', `${viewport ? viewport.offsetLeft : 0}px`);
-	style.setProperty('--game-top', `${viewport ? viewport.offsetTop : 0}px`);
+	style.setProperty('--game-left', `${(viewport ? viewport.offsetLeft : 0) + left}px`);
+	style.setProperty('--game-top', `${(viewport ? viewport.offsetTop : 0) + top}px`);
 }
 window.addEventListener('resize', fitGameCanvas);
+window.addEventListener('orientationchange', fitGameCanvas);
+window.addEventListener('pageshow', fitGameCanvas);
 if (window.visualViewport) {
 	window.visualViewport.addEventListener('resize', fitGameCanvas);
 	window.visualViewport.addEventListener('scroll', fitGameCanvas);
 }
 fitGameCanvas();
 
+function isGameStandalone() {
+	return navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches || window.matchMedia('(display-mode: fullscreen)').matches;
+}
+
+const installHint = document.getElementById('ios-install-hint');
+let installHintDismissed = false;
+try { installHintDismissed = sessionStorage.getItem('ios-install-hint-dismissed') === '1'; } catch (_) {}
+function updateInstallHint() {
+	const appleTouch = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+	installHint.hidden = !appleTouch || isGameStandalone() || !!(document.fullscreenElement || document.webkitFullscreenElement) || installHintDismissed;
+}
+document.getElementById('dismiss-install-hint').addEventListener('click', () => {
+	installHintDismissed = true;
+	try { sessionStorage.setItem('ios-install-hint-dismissed', '1'); } catch (_) {}
+	updateInstallHint();
+});
+updateInstallHint();
+
 function enterGameFullscreen() {
 	const root = document.documentElement;
-	if (document.fullscreenElement || !root.requestFullscreen) return;
-	root.requestFullscreen({ navigationUI: 'hide' }).then(() => {
-		if (screen.orientation && screen.orientation.lock) {
-			screen.orientation.lock('landscape').catch(() => {});
-		}
-	}).catch(() => {});
+	const request = root.requestFullscreen || root.webkitRequestFullscreen;
+	if (isGameStandalone() || document.fullscreenElement || document.webkitFullscreenElement || !request) return;
+	try {
+		Promise.resolve(request.call(root, { navigationUI: 'hide' })).then(() => {
+			if (screen.orientation && screen.orientation.lock) {
+				screen.orientation.lock('landscape').catch(() => {});
+			}
+		}).catch(() => {});
+	} catch (_) {}
 }
 // Touch activation becomes available on pointerup, rather than pointerdown.
-document.addEventListener('pointerup', enterGameFullscreen);
+document.getElementById('canvas').addEventListener('pointerup', enterGameFullscreen, { capture: true });
 document.addEventListener('keydown', (event) => {
 	if (event.key === 'Enter' && !event.repeat) enterGameFullscreen();
 });
-document.addEventListener('fullscreenchange', () => {
+function gameFullscreenChanged() {
+	updateInstallHint();
 	fitGameCanvas();
 	requestAnimationFrame(fitGameCanvas);
-});
+}
+document.addEventListener('fullscreenchange', gameFullscreenChanged);
+document.addEventListener('webkitfullscreenchange', gameFullscreenChanged);
 
 (function () {
 	const statusOverlay = document.getElementById('status');
