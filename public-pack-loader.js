@@ -26,6 +26,6 @@ async function startPublicGame(engine, config) {
 		}
 	}
 	await Promise.all([initialized, download(), download()]);
-	await engine.preloadFile(bytes, 'index.pck');
+	engine.copyToFS('index.pck', bytes.buffer);
 	return engine.start({ ...config, args: ['--main-pack', 'index.pck'] });
 }
