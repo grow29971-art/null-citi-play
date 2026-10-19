@@ -1,4 +1,4 @@
-NULL CITI — Third-party licenses and credits
+NULL CITI - Third-party licenses and credits
 
 ────────────────────────────────
 
@@ -29,7 +29,49 @@ SOFTWARE.
 
 ────────────────────────────────
 
-LICENSES.txt
+Music: Streetlight Serenade (c) 2023 Shane Ivers
+https://www.silvermansound.com/free-music/streetlight-serenade
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Changes: volume adjustment, edge fades and OGG conversion.
+
+────────────────────────────────
+
+Music: Opening Move (c) 2016 Shane Ivers
+https://www.silvermansound.com/free-music/opening-move
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Changes: Loudness normalization to -20 LUFS, 0.4s fade-in, 1s fade-out, stereo 44.1kHz OGG Vorbis quality 4.
+
+────────────────────────────────
+
+Music: La Pompe Du Trompe (c) 2016 Shane Ivers
+https://www.silvermansound.com/free-music/la-pompe-du-trompe
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Changes: Loudness normalization to -20 LUFS, 0.4s fade-in, 1s fade-out, stereo 44.1kHz OGG Vorbis quality 4.
+
+────────────────────────────────
+
+Music: Gymnopedie No. 1 - Kevin MacLeod
+https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100787
+CC-BY-4.0: https://creativecommons.org/licenses/by/4.0/
+Changes: Loudness normalization to -20 LUFS, 0.4s fade-in, 1s fade-out, stereo 44.1kHz OGG Vorbis quality 4.
+
+────────────────────────────────
+
+Music: Prelude in C (BWV 846) - Kevin MacLeod
+https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100689
+CC-BY-4.0: https://creativecommons.org/licenses/by/4.0/
+Changes: Loudness normalization to -20 LUFS, 0.4s fade-in, 1s fade-out, stereo 44.1kHz OGG Vorbis quality 4.
+
+────────────────────────────────
+
+Music: Canon in D Major - Kevin MacLeod
+https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100301
+CC-BY-4.0: https://creativecommons.org/licenses/by/4.0/
+Changes: Loudness normalization to -20 LUFS, 0.4s fade-in, 1s fade-out, stereo 44.1kHz OGG Vorbis quality 4.
+
+────────────────────────────────
+
+Scene music
 
 Scene music credits and licenses
 
@@ -51,139 +93,7 @@ Per-file hashes and modifications are in SOURCES.json.
 
 ────────────────────────────────
 
-SOURCES.json
-
-{
-  "tracks": [
-    {
-      "event": "lobby",
-      "title": "Streetlight Serenade",
-      "author": "Shane Ivers",
-      "source_page": "https://www.silvermansound.com/free-music/streetlight-serenade",
-      "download_url": "https://www.silvermansound.com/wp-content/uploads/streetlight-serenade.mp3",
-      "recording_year": 2023,
-      "period_note": "Modern original 1940s-style smooth jazz; not an archival 1940s recording.",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "commercial_use": true,
-      "attribution_required": true,
-      "attribution": "Music: Streetlight Serenade (c) 2023 Shane Ivers\nhttps://www.silvermansound.com/free-music/streetlight-serenade\nCC BY 4.0: https://creativecommons.org/licenses/by/4.0/\nChanges: volume adjustment, edge fades and OGG conversion.",
-      "path": "res://assets/scene_music_v2/streetlight-serenade.ogg",
-      "sha256": "5ac06fe51e24b55374932745573838046dd88d006687c6ff9c05058b04d35ade",
-      "source_sha256": "edc4199a28b6e4e5fe28ade14099469751a791d19c7fbed143262f48d41df0fe",
-      "duration_seconds": 174.210612,
-      "modifications": "Gain -11.3 dB (approximately -20 LUFS); 0.5-second fade-in and 1.5-second fade-out; stereo 44.1 kHz OGG Vorbis quality 5.",
-      "gain_db": -11.3,
-      "fade_in_seconds": 0.5,
-      "fade_out_seconds": 1.5,
-      "license_verified_on": "2026-10-18",
-      "commercial_game_permission": "https://www.silvermansound.com/licenses",
-      "key": "lobby",
-      "artist": "Shane Ivers",
-      "genre": "jazz",
-      "source": "https://www.silvermansound.com/free-music/streetlight-serenade"
-    },
-    {
-      "key": "jazz_opening",
-      "title": "Opening Move",
-      "artist": "Shane Ivers",
-      "genre": "jazz",
-      "source": "https://www.silvermansound.com/free-music/opening-move",
-      "download": "https://www.silvermansound.com/wp-content/uploads/opening-move.mp3",
-      "path": "res://assets/jukebox_v1/jazz_opening.ogg",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "attribution_required": true,
-      "verified_on": "2026-10-19",
-      "duration_seconds": 147.49,
-      "sha256": "a95a7bcf04e0883bac6b9c97c1f003da8a2d9ddc91adf5ff028a5071363af739",
-      "source_sha256": "2fc33b27b9963608a2bad2da111d2a0604ed46c7cd2b84397ba6bdb87e8d98c7",
-      "modifications": "Loudness normalization to -20 LUFS, 0.4s fade-in, 1s fade-out, stereo 44.1kHz OGG Vorbis quality 4."
-    },
-    {
-      "key": "jazz_paris",
-      "title": "La Pompe Du Trompe",
-      "artist": "Shane Ivers",
-      "genre": "jazz",
-      "source": "https://www.silvermansound.com/free-music/la-pompe-du-trompe",
-      "download": "https://www.silvermansound.com/wp-content/uploads/la-pompe-du-trompe.mp3",
-      "path": "res://assets/jukebox_v1/jazz_paris.ogg",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "attribution_required": true,
-      "verified_on": "2026-10-19",
-      "duration_seconds": 138.214,
-      "sha256": "d2e36b8a8f8a4d6c43f598334bf7fbf0716d7d9d757f47654b5597830cf9fe53",
-      "source_sha256": "78641efe3f097a43987645d70b4d7bc3a424c80aa3790278a4abd73d6b378b54",
-      "modifications": "Loudness normalization to -20 LUFS, 0.4s fade-in, 1s fade-out, stereo 44.1kHz OGG Vorbis quality 4."
-    },
-    {
-      "key": "classical_gymnopedie",
-      "title": "Gymnopedie No. 1",
-      "artist": "Kevin MacLeod",
-      "composer": "Erik Satie",
-      "genre": "classical",
-      "isrc": "USUAN1100787",
-      "file": "Gymnopedie No 1.mp3",
-      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100787",
-      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Gymnopedie%20No%201.mp3",
-      "path": "res://assets/jukebox_v1/classical_gymnopedie.ogg",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "attribution_required": true,
-      "verified_on": "2026-10-19",
-      "duration_seconds": 187.089,
-      "sha256": "6fb2ae0d8fc89192b1525e93204c54bdaafe02ccb282813a3d65588ef110842b",
-      "source_sha256": "8cba6bb3da51066ad39520ec218a327bb6222d8fb32bc52f28a1e90b67756f70",
-      "modifications": "Loudness normalization to -20 LUFS, 0.4s fade-in, 1s fade-out, stereo 44.1kHz OGG Vorbis quality 4."
-    },
-    {
-      "key": "classical_prelude",
-      "title": "Prelude in C (BWV 846)",
-      "artist": "Kevin MacLeod",
-      "composer": "J. S. Bach",
-      "genre": "classical",
-      "isrc": "USUAN1100689",
-      "file": "Prelude in C - BWV 846.mp3",
-      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100689",
-      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Prelude%20in%20C%20-%20BWV%20846.mp3",
-      "path": "res://assets/jukebox_v1/classical_prelude.ogg",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "attribution_required": true,
-      "verified_on": "2026-10-19",
-      "duration_seconds": 178.704,
-      "sha256": "60e8ee569128e758afc869843db81319af3973aca728b532900e94e3284a848a",
-      "source_sha256": "84a391d63e505f5c9b2e75e7bf99e9a773aed2b6c2891030394b9c8e5c1cc01a",
-      "modifications": "Loudness normalization to -20 LUFS, 0.4s fade-in, 1s fade-out, stereo 44.1kHz OGG Vorbis quality 4."
-    },
-    {
-      "key": "classical_canon",
-      "title": "Canon in D Major",
-      "artist": "Kevin MacLeod",
-      "composer": "Johann Pachelbel",
-      "genre": "classical",
-      "isrc": "USUAN1100301",
-      "file": "Canon in D Major.mp3",
-      "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100301",
-      "download": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Canon%20in%20D%20Major.mp3",
-      "path": "res://assets/jukebox_v1/classical_canon.ogg",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "attribution_required": true,
-      "verified_on": "2026-10-19",
-      "duration_seconds": 355.709,
-      "sha256": "75f27efc82a8447efc9b85e17dbca27412e553d644c1f7b249bb3c87a1d27313",
-      "source_sha256": "9377b058b8c132d87e977f6c1a7686b18c59e5f3a0ae457cd39005680363fadc",
-      "modifications": "Loudness normalization to -20 LUFS, 0.4s fade-in, 1s fade-out, stereo 44.1kHz OGG Vorbis quality 4."
-    }
-  ],
-  "license_note": "Free commercial game use under CC BY 4.0 with in-game attribution; classical compositions and these recordings are credited separately."
-}
-
-────────────────────────────────
-
-LICENSES.txt
+Music and sound effects
 
 NULL CITI audio replacement
 
@@ -207,7 +117,7 @@ Source-page snapshots and original archive licences are in the accompanying sour
 
 ────────────────────────────────
 
-LICENSES.txt
+Creature voices
 
 NULL CITI creature voices
 Author: rubberduck
@@ -221,7 +131,7 @@ Original recordings and captured licence evidence: raw/creature_voice_v1/
 
 ────────────────────────────────
 
-LICENSE-MabinogiClassic.txt
+Mabinogi Classic font
 
 마비옛체 (Mabinogi Classic)
 Copyright (c) 2022 FONTRIX. All rights reserved. Font designed by FONTRIX.
@@ -237,7 +147,7 @@ https://brand.nexon.com/ko/ci-brand-guidelines/typeface
 
 ────────────────────────────────
 
-LICENSE-Galmuri.txt
+Galmuri fonts
 
 Copyright (c) 2019–2025 Lee Minseo (quiple@quiple.dev)
 
@@ -335,7 +245,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
 ────────────────────────────────
 
-LICENSE-NotoSansKR.txt
+Noto Sans KR fonts
 
 This Font Software is licensed under the SIL Open Font License,
 Version 1.1.
@@ -432,7 +342,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
 ────────────────────────────────
 
-Godot bundled components — copyright notices
+Godot bundled components - copyright notices
 
 ────────────────────────────────
 
@@ -1335,7 +1245,7 @@ License: BSD-3-clause
 
 ────────────────────────────────
 
-Godot bundled components — full license texts
+Godot bundled components - full license texts
 
 ────────────────────────────────
 
