@@ -161,9 +161,24 @@ body {
 		<script src="index.js"></script>
 <script src="public-pack-loader.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":617820940,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":624109620,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
+
+window.setGameLanguage = function (language) {
+	const english = language === 'en';
+	document.documentElement.lang = english ? 'en' : 'ko';
+	const hint = document.getElementById('ios-install-hint');
+	hint.setAttribute('aria-label', english ? 'iPhone fullscreen guide' : '아이폰 전체 화면 실행 안내');
+	hint.querySelector('span').innerHTML = english
+		? '<strong>Play without the address bar</strong><br>Safari Share → Add to Home Screen → Open the new icon<br>Enable “Open as Web App” if available.'
+		: '<strong>주소창 없이 플레이</strong><br>Safari 공유 → 홈 화면에 추가 → 추가한 아이콘으로 실행<br>‘웹 앱으로 열기’가 보이면 켜 주세요.';
+	const close = document.getElementById('dismiss-install-hint');
+	close.textContent = english ? 'Close' : '닫기';
+	close.setAttribute('aria-label', english ? 'Close fullscreen guide' : '전체 화면 안내 닫기');
+	try { localStorage.setItem('null-citi-language', english ? 'en' : 'ko'); } catch (_) {}
+};
+try { window.setGameLanguage(localStorage.getItem('null-citi-language') || 'ko'); } catch (_) {}
 
 // Fill the visible area while keeping the game's logical UI at least 1152 x 648.
 function fitGameCanvas() {

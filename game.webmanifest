@@ -1,0 +1,24 @@
+{
+	"background_color": "#000000",
+	"display": "fullscreen",
+	"icons": [
+		{
+			"sizes": "192x192",
+			"src": "game-icon-192.png",
+			"type": "image/png"
+		},
+		{
+			"sizes": "512x512",
+			"src": "game-icon-512.png",
+			"type": "image/png"
+		}
+	],
+	"id": "./",
+	"lang": "ko",
+	"name": "NULL CITI",
+	"orientation": "landscape",
+	"scope": "./",
+	"short_name": "NULL CITI",
+	"start_url": "./",
+	"theme_color": "#000000"
+}
