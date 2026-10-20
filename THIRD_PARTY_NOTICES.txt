@@ -273,6 +273,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
 Noto Sans KR fonts
 
+Noto Sans KR Regular and Bold (embedded font copyright notice):
+© 2014-2021 Adobe (http://www.adobe.com/).
+
 This Font Software is licensed under the SIL Open Font License,
 Version 1.1.
 
