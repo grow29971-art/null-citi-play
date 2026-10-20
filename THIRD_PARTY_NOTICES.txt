@@ -144,6 +144,19 @@ Exact recording hashes and segment times: SOURCES.json
 
 ────────────────────────────────
 
+Weapon draw and switch sounds
+
+Weapon handling recordings by Kenney, CC0 1.0 Universal.
+https://creativecommons.org/publicdomain/zero/1.0/
+https://kenney.nl/assets/rpg-audio
+https://kenney.nl/assets/sci-fi-sounds
+https://kenney.nl/assets/impact-sounds
+Changes: weapon-specific layering, trimming, resampling, EQ, fades, normalization and locally synthesized energy elements. Local additions are also dedicated to CC0.
+The existing katana draw remains credited separately in recorded_weapon_sfx_v1.
+Exact source members, hashes and edits: SOURCES.json.
+
+────────────────────────────────
+
 Mabinogi Classic font
 
 마비옛체 (Mabinogi Classic)
