@@ -131,6 +131,19 @@ Original recordings and captured licence evidence: raw/creature_voice_v1/
 
 ────────────────────────────────
 
+Recorded sword and axe sounds
+
+Recorded sword swings/draw and axe swings
+Ben Jaszczak & Brian Nelson / Still North Media
+https://opengameart.org/content/medieval-sound-effects-weapon-textures
+CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+Commercial use, editing and redistribution are permitted; attribution is optional.
+Trimmed, high-pass filtered, faded and normalized for the game.
+Exact recording hashes and segment times: SOURCES.json
+
+────────────────────────────────
+
 Mabinogi Classic font
 
 마비옛체 (Mabinogi Classic)
