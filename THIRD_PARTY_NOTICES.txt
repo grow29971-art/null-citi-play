@@ -71,6 +71,32 @@ Changes: Loudness normalization to -20 LUFS, 0.4s fade-in, 1s fade-out, stereo 4
 
 ────────────────────────────────
 
+Android Google sign-in libraries
+
+Android Google sign-in components (Android builds)
+
+AndroidX Credential Manager 1.6.0 and AndroidX support libraries
+Copyright The Android Open Source Project
+Apache License, Version 2.0
+https://www.apache.org/licenses/LICENSE-2.0
+https://developer.android.com/jetpack/androidx/releases/credentials
+
+Google Identity googleid 1.2.1 and Google Play services dependencies
+Copyright Google LLC
+Android Software Development Kit License
+https://developer.android.com/studio/terms.html
+https://developers.google.com/identity/android-credential-manager
+
+Kotlin standard library and kotlinx.coroutines dependencies
+Copyright JetBrains s.r.o. and Kotlin contributors
+Apache License, Version 2.0
+https://github.com/JetBrains/kotlin
+https://github.com/Kotlin/kotlinx.coroutines
+
+Full Apache License 2.0 text is included in the bundled full license texts below.
+
+────────────────────────────────
+
 Phosphor Icons · adapted UI symbols (MIT)
 
 MIT License
