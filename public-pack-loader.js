@@ -1,5 +1,5 @@
 async function startPublicGame(engine, config) {
-	const response = await fetch('pack-manifest.json');
+	const response = await fetch('pack-manifest.json', { cache: 'no-store' });
 	if (!response.ok) throw new Error('게임 다운로드 정보를 불러오지 못했습니다. 새로고침해 주세요.');
 	const manifest = await response.json();
 	let offset = 0;
