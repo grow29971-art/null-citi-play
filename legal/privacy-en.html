@@ -13,7 +13,7 @@ Progress, currency, equipment, settings, terms version, acceptance time and age 
 
 3. Account sign-in
 Purposes: distinguish accounts, manage sign-in/sessions, account rights requests and consent records.
-Actual data: Google 계정 식별자·이메일·이름·프로필 사진 URL·검증 상태, 널시티 사용자 ID·로그인 시각·동의 기록. Google 비밀번호는 게임이 수집하지 않습니다.. Document versions, acceptance times and choices are also linked to the authenticated account.
+Actual data: 선택한 Google·카카오 계정의 식별자·이메일·이름/닉네임·프로필 사진 URL·검증 상태 또는 Apple 계정의 앱별 식별자·공유 이메일(가리기 선택 시 중계 이메일)·검증 상태, 널시티 사용자 ID·로그인 시각·동의 기록. iPhone 기본 Apple 로그인에서는 이메일만 요청합니다. 소셜 계정 비밀번호는 게임이 수집하지 않습니다.. Document versions, acceptance times and choices are also linked to the authenticated account.
 Retention: 본인 계정의 비공개 테스트 종료 또는 계정 삭제 요청 처리 시까지 서버 인증 계정을 보관합니다. 앱의 액세스·갱신 토큰은 실행 중 메모리에만 두며 로그아웃 또는 종료 시 제거합니다. 공급자 운영 로그와 백업은 각 공급자의 보관 정책을 따릅니다. 일반 이용자 공개 전 보유·파기 조건을 별도로 확정합니다.
 Separate consent is requested for account-data processing. You may refuse; sign-in and game start will not proceed. The game does not store provider passwords. Access/refresh tokens stay in running memory; temporary browser PKCE data is cleared on return or cancellation. Signing out does not delete information held by the provider or authentication server.
 
@@ -21,7 +21,7 @@ Separate consent is requested for account-data processing. You may refuse; sign-
 Chat text, temporary sessions, server-generated nicknames and message times are processed by the relay and shown to other users. The current local relay keeps the last 100 messages in RAM until restart. Sessions idle for an hour and IP rate-limit records idle for one minute are removed on a subsequent request. It writes no separate chat-body or authentication-token logs. Real hosting/access-log fields and retention must be disclosed before a public relay is enabled. Hosting/access logs: 웹과 인증 서비스는 IP·요청 시각·경로·사용자 에이전트 등 접속·운영 로그를 처리할 수 있습니다. Supabase 문서상 코어 인증·DB는 선택한 서울 리전에 있고 운영 로그는 EU에서 처리됩니다. Pro의 대시보드 로그 열람 범위 7일은 전체 로그의 삭제 보장 기간이 아닙니다. 세부 처리국가·로그·백업 파기 조건은 일반 이용자 공개 전 확정합니다.
 
 5. Processors, recipients and overseas processing
-Processors and duties: Supabase Pte. Ltd.: 계정 인증·DB, AWS 서울(ap-northeast-2). Supabase, Inc.: 필요한 경우 운영·지원. Google LLC: Google 계정 인증. Vercel Inc.: 웹 미리보기 제공. 현재 신규 계정 가입을 서버에서 차단하고 이미 등록된 본인 계정만 테스트합니다.
+Processors and duties: Supabase Pte. Ltd.: 계정 인증·DB, AWS 서울(ap-northeast-2). Supabase, Inc.: 필요한 경우 운영·지원. Google LLC: 선택한 Google 계정 인증. 주식회사 카카오: 선택한 카카오계정 인증. Apple 및 해당 개인정보 처리방침상 계열사: 선택한 Apple 계정 인증·보안. Vercel Inc.: 웹 미리보기 제공. 현재 신규 계정 가입을 서버에서 차단하고 이미 등록된 본인 계정만 테스트합니다.
 The game currently does not share data with third parties for marketing. See sections 2 and 4 for public chat and data sent to your chosen co-op host. Overseas processing: Not yet specified
 Public account services and public chat remain disabled until actual processing locations and lawful grounds are confirmed. The current private functionality test blocks new signups and permits only a registered developer account. Overseas transfers based on consent require separate consent. If another permitted ground applies, such as necessary contract-related processing/storage, that ground and the required details must be disclosed.
 
