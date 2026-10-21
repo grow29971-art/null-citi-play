@@ -71,6 +71,32 @@ Changes: Loudness normalization to -20 LUFS, 0.4s fade-in, 1s fade-out, stereo 4
 
 ────────────────────────────────
 
+AdMob Godot plugin v7.0 (MIT) · https://github.com/godot-sdk-integrations/godot-admob
+
+MIT License
+
+Copyright (c) 2025 Cengiz (https://github.com/cengiz-pz) and Godot Engine Community SDK Integrations
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+────────────────────────────────
+
 Android Google sign-in libraries
 
 Android Google sign-in components (Android builds)
@@ -3194,7 +3220,28 @@ NVIDIA SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT,
 TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF
 NVIDIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-      {"address":"","auth_items":"선택한 Google·카카오 계정의 식별자·이메일·이름/닉네임·프로필 사진 URL·검증 상태 또는 Apple 계정의 앱별 식별자·공유 이메일(가리기 선택 시 중계 이메일)·검증 상태, 널시티 사용자 ID·로그인 시각·동의 기록. iPhone 기본 Apple 로그인에서는 이메일만 요청합니다. 소셜 계정 비밀번호는 게임이 수집하지 않습니다.","auth_retention":"본인 계정의 비공개 테스트 종료 또는 계정 삭제 요청 처리 시까지 서버 인증 계정을 보관합니다. 앱의 액세스·갱신 토큰은 실행 중 메모리에만 두며 로그아웃 또는 종료 시 제거합니다. 공급자 운영 로그와 백업은 각 공급자의 보관 정책을 따릅니다. 일반 이용자 공개 전 보유·파기 조건을 별도로 확정합니다.","business_registration":"","commerce_registration":"","content_descriptors":"","effective_date":"2026-10-21","hosting_logs":"웹과 인증 서비스는 IP·요청 시각·경로·사용자 에이전트 등 접속·운영 로그를 처리할 수 있습니다. Supabase 문서상 코어 인증·DB는 선택한 서울 리전에 있고 운영 로그는 EU에서 처리됩니다. Pro의 대시보드 로그 열람 범위 7일은 전체 로그의 삭제 보장 기간이 아닙니다. 세부 처리국가·로그·백업 파기 조건은 일반 이용자 공개 전 확정합니다.","minimum_age":14,"operator":"김성우","overseas":[{"contact":"https://www.apple.com/legal/privacy/data/en/sign-in-with-apple/ / https://www.apple.com/legal/privacy/contact/","country":"미국 및 Apple 개인정보 처리방침상 처리 지역. 최종 처리 주체·이전 국가는 일반 공개 전 추가 확인","items":"Apple 로그인 요청·앱별 식별자·공유 또는 중계 이메일·검증 정보. Apple은 계정·기기 정보를 인증과 부정 사용 방지에 처리할 수 있음","purpose":"선택한 Apple 계정 인증·부정 사용 방지·서비스 보안","recipient":"Apple 및 Apple 개인정보 처리방침상 해당 계열사","refusal":"Apple 계정 연결을 거부하거나 Apple 계정 설정에서 연결을 중단할 수 있습니다. 동의하지 않으면 해당 방식의 로그인은 진행되지 않습니다.","retention":"Apple의 서비스별 개인정보 안내와 개인정보 처리방침상 필요한 기간. 구체적인 보관·파기 조건은 일반 공개 전 추가 확인","time_method":"Apple 로그인 시 HTTPS 인증 화면 또는 iOS AuthenticationServices 이용"},{"contact":"https://supabase.com/legal/privacy-resources/data-residency-and-transfers-faq / privacy@supabase.io","country":"싱가포르·미국(운영·지원), 한국 서울(인증·DB), EU(운영 로그; 개별 국가와 지원 접근 위치는 일반 공개 전 추가 확인)","items":"테스트 계정 식별자·기본 프로필·이메일·세션·동의 기록·접속 로그","purpose":"비공개 본인 계정 인증, 세션 관리, 서비스 보안·장애 대응","recipient":"Supabase Pte. Ltd. / Supabase, Inc.","refusal":"동의하지 않으면 로그인과 게임 시작을 진행하지 않습니다. 테스트 계정 삭제·동의 철회 문의는 운영자 이메일로 접수합니다.","retention":"본인 테스트 계정 삭제 시까지. 공급자 로그·백업의 별도 보관·삭제 조건은 공개 전 확정","time_method":"로그인·갱신·로그아웃 및 서비스 접속 시 HTTPS 전송"},{"contact":"https://policies.google.com/privacy?hl=ko","country":"미국 및 Google 개인정보처리방침에 기재된 전 세계 처리 지역","items":"Google 로그인 요청, 계정 선택, 기본 프로필·이메일 제공 동의, 인증·보안 관련 접속 정보","purpose":"선택한 Google 계정의 본인 인증","recipient":"Google LLC","refusal":"Google 계정 연결을 거부하거나 철회할 수 있으며 로그인과 게임 시작은 진행되지 않습니다.","retention":"Google 계정 설정 및 Google 개인정보처리방침의 보유·삭제 정책에 따름","time_method":"Google 로그인 시 Google HTTPS 인증 화면 또는 Android Credential Manager 이용"}],"overseas_basis":"consent","overseas_reviewed":false,"privacy_email":"grow29971@gmail.com","privacy_officer":"김성우","private_test_account":"grow29971@gmail.com","private_testing":true,"processors":"Supabase Pte. Ltd.: 계정 인증·DB, AWS 서울(ap-northeast-2). Supabase, Inc.: 필요한 경우 운영·지원. Google LLC: 선택한 Google 계정 인증. 주식회사 카카오: 선택한 카카오계정 인증. Apple 및 해당 개인정보 처리방침상 계열사: 선택한 Apple 계정 인증·보안. Vercel Inc.: 웹 미리보기 제공. 현재 신규 계정 가입을 서버에서 차단하고 이미 등록된 본인 계정만 테스트합니다.","publication_ready":false,"rating":"","rating_number":"","representative":"김성우","support_email":"grow29971@gmail.com"}         {"google_client_id":"884944143920-9s2jpcgfbgqv3qb26s9fi9kqdnlspero.apps.googleusercontent.com","providers":["google","apple","kakao"],"public_key":"sb_publishable_VbKS6rRI69ZrMehXip657w_mu5SM-TS","url":"https://zwslmyofxiyjyiqqvjeo.supabase.co"}           Android Google sign-in components (Android builds)
+     {"address":"","auth_items":"선택한 Google·카카오 계정의 식별자·이메일·이름/닉네임·프로필 사진 URL·검증 상태 또는 Apple 계정의 앱별 식별자·공유 이메일(가리기 선택 시 중계 이메일)·검증 상태, 널시티 사용자 ID·로그인 시각·동의 기록. iPhone 기본 Apple 로그인에서는 이메일만 요청합니다. 소셜 계정 비밀번호는 게임이 수집하지 않습니다.","auth_retention":"본인 계정의 비공개 테스트 종료 또는 계정 삭제 요청 처리 시까지 서버 인증 계정을 보관합니다. 앱의 액세스·갱신 토큰은 실행 중 메모리에만 두며 로그아웃 또는 종료 시 제거합니다. 공급자 운영 로그와 백업은 각 공급자의 보관 정책을 따릅니다. 일반 이용자 공개 전 보유·파기 조건을 별도로 확정합니다.","business_registration":"","commerce_registration":"","content_descriptors":"","effective_date":"2026-10-21","hosting_logs":"웹과 인증 서비스는 IP·요청 시각·경로·사용자 에이전트 등 접속·운영 로그를 처리할 수 있습니다. Supabase 문서상 코어 인증·DB는 선택한 서울 리전에 있고 운영 로그는 EU에서 처리됩니다. Pro의 대시보드 로그 열람 범위 7일은 전체 로그의 삭제 보장 기간이 아닙니다. 세부 처리국가·로그·백업 파기 조건은 일반 이용자 공개 전 확정합니다.","minimum_age":14,"operator":"김성우","overseas":[{"contact":"https://www.apple.com/legal/privacy/data/en/sign-in-with-apple/ / https://www.apple.com/legal/privacy/contact/","country":"미국 및 Apple 개인정보 처리방침상 처리 지역. 최종 처리 주체·이전 국가는 일반 공개 전 추가 확인","items":"Apple 로그인 요청·앱별 식별자·공유 또는 중계 이메일·검증 정보. Apple은 계정·기기 정보를 인증과 부정 사용 방지에 처리할 수 있음","purpose":"선택한 Apple 계정 인증·부정 사용 방지·서비스 보안","recipient":"Apple 및 Apple 개인정보 처리방침상 해당 계열사","refusal":"Apple 계정 연결을 거부하거나 Apple 계정 설정에서 연결을 중단할 수 있습니다. 동의하지 않으면 해당 방식의 로그인은 진행되지 않습니다.","retention":"Apple의 서비스별 개인정보 안내와 개인정보 처리방침상 필요한 기간. 구체적인 보관·파기 조건은 일반 공개 전 추가 확인","time_method":"Apple 로그인 시 HTTPS 인증 화면 또는 iOS AuthenticationServices 이용"},{"contact":"https://supabase.com/legal/privacy-resources/data-residency-and-transfers-faq / privacy@supabase.io","country":"싱가포르·미국(운영·지원), 한국 서울(인증·DB), EU(운영 로그; 개별 국가와 지원 접근 위치는 일반 공개 전 추가 확인)","items":"테스트 계정 식별자·기본 프로필·이메일·세션·동의 기록·접속 로그","purpose":"비공개 본인 계정 인증, 세션 관리, 서비스 보안·장애 대응","recipient":"Supabase Pte. Ltd. / Supabase, Inc.","refusal":"동의하지 않으면 로그인과 게임 시작을 진행하지 않습니다. 테스트 계정 삭제·동의 철회 문의는 운영자 이메일로 접수합니다.","retention":"본인 테스트 계정 삭제 시까지. 공급자 로그·백업의 별도 보관·삭제 조건은 공개 전 확정","time_method":"로그인·갱신·로그아웃 및 서비스 접속 시 HTTPS 전송"},{"contact":"https://policies.google.com/privacy?hl=ko","country":"미국 및 Google 개인정보처리방침에 기재된 전 세계 처리 지역","items":"Google 로그인 요청, 계정 선택, 기본 프로필·이메일 제공 동의, 인증·보안 관련 접속 정보","purpose":"선택한 Google 계정의 본인 인증","recipient":"Google LLC","refusal":"Google 계정 연결을 거부하거나 철회할 수 있으며 로그인과 게임 시작은 진행되지 않습니다.","retention":"Google 계정 설정 및 Google 개인정보처리방침의 보유·삭제 정책에 따름","time_method":"Google 로그인 시 Google HTTPS 인증 화면 또는 Android Credential Manager 이용"}],"overseas_basis":"consent","overseas_reviewed":false,"privacy_email":"grow29971@gmail.com","privacy_officer":"김성우","private_test_account":"grow29971@gmail.com","private_testing":true,"processors":"Supabase Pte. Ltd.: 계정 인증·DB, AWS 서울(ap-northeast-2). Supabase, Inc.: 필요한 경우 운영·지원. Google LLC: 선택한 Google 계정 인증. 주식회사 카카오: 선택한 카카오계정 인증. Apple 및 해당 개인정보 처리방침상 계열사: 선택한 Apple 계정 인증·보안. Vercel Inc.: 웹 미리보기 제공. 현재 신규 계정 가입을 서버에서 차단하고 이미 등록된 본인 계정만 테스트합니다.","publication_ready":false,"rating":"","rating_number":"","representative":"김성우","support_email":"grow29971@gmail.com"}         {"google_client_id":"884944143920-9s2jpcgfbgqv3qb26s9fi9kqdnlspero.apps.googleusercontent.com","providers":["google","apple","kakao"],"public_key":"sb_publishable_VbKS6rRI69ZrMehXip657w_mu5SM-TS","url":"https://zwslmyofxiyjyiqqvjeo.supabase.co"}           MIT License
+
+Copyright (c) 2025 Cengiz (https://github.com/cengiz-pz) and Godot Engine Community SDK Integrations
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+         Android Google sign-in components (Android builds)
 
 AndroidX Credential Manager 1.6.0 and AndroidX support libraries
 Copyright The Android Open Source Project
@@ -3589,7 +3636,40 @@ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
 DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
-        {
+        [General]
+is_real=false
+
+[Debug]
+app_id="ca-app-pub-3940256099942544~3347511713"
+
+[Release]
+app_id=""
+
+[Rewarded]
+ad_unit_id=""
+[General]
+is_real=false
+
+[Debug]
+app_id="ca-app-pub-3940256099942544~1458002511"
+
+[Release]
+app_id=""
+
+[Rewarded]
+ad_unit_id=""
+
+[ATT]
+att_enabled=false
+att_text=""
+           {
+  "현재 %s": "Now %s",
+  "다음 %s": "Next %s",
+  "보스까지 %d맵": "%d maps to boss",
+  "보스방": "Boss room",
+  "보스": "Boss",
+  "연속 보스전": "Boss rush",
+  "구역 완료": "Area complete",
   "동의하지 않으면 시작할 수 없습니다. 이 탭을 닫아 종료하세요.": "Agreement is needed to start. Close this tab to exit.",
   "동의하지 않음": "Do Not Agree",
   "동의 정보를 확인하지 못했습니다. 다시 시도해주세요.": "Could not verify your consent record. Please try again.",
@@ -4505,6 +4585,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   "빈 슬롯": "Empty Slot",
   "빈 자리": "Empty",
   "빈 재배 모듈": "Empty Growing Module",
+  "재배 모듈": "Growing Module",
   "빈 재배 모듈에 메디허브 심기": "Plant Mediherb in an empty growing module",
   "빙결 실험체": "Frozen Specimen",
   "빙정 관측 드론": "Frost Observer Drone",
@@ -6129,9 +6210,40 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   "이 로그인은 아직 준비 중입니다. 잠시 후 다시 확인해주세요.": "This sign-in method is being prepared. Please check again shortly.",
   "비공개 테스트 중입니다. 등록된 개발자 계정으로 로그인해주세요.": "Private test. Sign in with the registered developer account.",
   "현재는 등록된 개발자 계정만 로그인할 수 있습니다.": "Only the registered developer account can sign in at this time.",
-  "카카오로 로그인": "Log in with Kakao"
+  "카카오로 로그인": "Log in with Kakao",
+  "닉네임 등록": "Choose a nickname",
+  "닉네임 입력": "Enter a nickname",
+  "한글·영문·숫자·밑줄 2~12자": "2–12 Korean/English letters, digits or underscores",
+  "한글·영문·숫자·밑줄로 2~12자를 입력해주세요.": "Use 2–12 Korean/English letters, digits or underscores.",
+  "처음 한 번만 정할 수 있으며, 등록 후 변경할 수 없습니다.": "Choose carefully. Your nickname cannot be changed after registration.",
+  "등록하고 시작": "Register and start",
+  "다시 확인": "Try again",
+  "닉네임을 확인하고 있습니다.": "Checking your nickname…",
+  "닉네임을 등록하고 있습니다.": "Registering your nickname…",
+  "게임에서 사용할 닉네임을 정해주세요.": "Choose the nickname you will use in the game.",
+  "이미 사용 중인 닉네임입니다. 다른 이름을 입력해주세요.": "That nickname is taken. Please choose another.",
+  "닉네임을 확인하지 못했습니다. 연결 확인 후 다시 시도해주세요.": "Could not confirm your nickname. Check your connection and try again.",
+  "인증이 만료되었습니다. 다시 로그인해주세요.": "Your session expired. Please sign in again.",
+  "닉네임을 등록했습니다.": "Your nickname is registered.",
+  "광고 보고 부활": "Watch Ad to Revive",
+  "부활 사용 완료": "Revive Used",
+  "광고 부활 이용 불가": "Revive Unavailable",
+  "광고 부활은 Android·iOS 앱에서 이용할 수 있습니다.": "Ad revives are available in the Android and iOS apps.",
+  "광고 시청을 완료하면 쓰러진 자리에서 부활합니다.\n체력·방어막·MP를 전부 회복하고 3초 동안 무적이 됩니다.\n출격당 1회 이용할 수 있습니다.": "Finish watching the ad to revive where you fell.\nFully restores HP, shield and MP, with 3 seconds of invincibility.\nAvailable once per sortie.",
+  "광고를 준비하고 있습니다…": "Preparing your ad…",
+  "광고를 닫으면 게임으로 돌아옵니다.": "You will return to the game when the ad closes.",
+  "광고를 불러오지 못했습니다. 연결 확인 후 다시 시도해 주세요.": "Could not load the ad. Check your connection and try again.",
+  "지금 볼 수 있는 광고가 없습니다. 잠시 후 다시 시도해 주세요.": "No ads are available right now. Please try again later.",
+  "광고를 시작하지 못했습니다. 부활 횟수는 차감되지 않았습니다.": "Could not start the ad. Your revive is still available.",
+  "광고 설정을 준비 중입니다. 잠시 후 다시 시도해 주세요.": "Ads are being set up. Please try again later.",
+  "광고 시청이 완료되지 않았습니다. 부활 횟수는 차감되지 않았습니다.": "The ad was not completed. Your revive is still available.",
+  "부활 완료 · 3초 동안 무적": "Revived · Invincible for 3 seconds",
+  "자동 로그인 정보를 확인하고 있습니다.": "Restoring your sign-in…",
+  "자동 로그인 서버에 연결하지 못했습니다. 연결 후 다시 시도해주세요.": "Could not restore your sign-in. Check your connection and try again.",
+  "로그인했습니다. 이 기기에 자동 로그인 정보를 저장하지 못했습니다.": "Signed in, but could not save automatic sign-in on this device.",
+  "다시 연결": "Reconnect"
 }
-               {
+   {
   "terms": {
     "ko": [
       "NULL CITI 이용약관\n문서 버전: {{version}} · 시행일: {{effective}}\n{{draft}}",

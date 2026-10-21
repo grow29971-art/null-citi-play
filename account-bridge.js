@@ -1,7 +1,8 @@
-/* PKCE redirect transport only. Access and refresh tokens stay in Godot memory. */
+/* One-use PKCE transport and same-origin refresh-session storage. Access tokens stay in memory. */
 (function (root) {
   'use strict';
   const key = 'null-citi-account-pkce-v1';
+  const sessionKey = 'null-citi-refresh-session-v1';
   const url = new URL(root.location.href);
   let returned = null;
   const hash = new URLSearchParams(url.hash.slice(1));
@@ -34,6 +35,19 @@
     },
     clearPending: () => {
       try { root.sessionStorage.removeItem(key); } catch (_) { /* storage may be disabled */ }
+    },
+    readSession: () => {
+      try { return root.localStorage.getItem(sessionKey) || ''; } catch (_) { return ''; }
+    },
+    writeSession: (value) => {
+      try {
+        if (typeof value !== 'string' || value.length > 32768) return false;
+        root.localStorage.setItem(sessionKey, value);
+        return true;
+      } catch (_) { return false; }
+    },
+    clearSession: () => {
+      try { root.localStorage.removeItem(sessionKey); } catch (_) { /* storage may be disabled */ }
     },
     begin: (pending, destination) => {
       try {
