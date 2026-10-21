@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>Privacy Policy · NULL CITI</title><style>body{margin:0;background:#10171d;color:#eef4f7;font:18px/1.8 system-ui,sans-serif}main{max-width:900px;margin:auto;padding:24px}nav{display:flex;gap:12px;flex-wrap:wrap;border-bottom:1px solid #73838e;padding-bottom:20px}a{color:#85e8df;display:inline-block;padding:8px;min-height:32px}article{white-space:pre-wrap;overflow-wrap:anywhere}a:focus-visible{outline:3px solid #ffe2a1}</style></head><body><main><nav aria-label="Legal documents"><a href="terms-en.html">Terms of Service</a> <a href="privacy-en.html">Privacy Policy</a> <a href="notice-en.html">Service Information &amp; Rules</a> <a href="account_data-en.html">Account Data Collection &amp; Use</a> <a href="overseas-en.html">Overseas Processing Notice</a> <a href="rights-en.html">Support &amp; Privacy Rights</a> <a href="privacy.html">한국어</a></nav><h1>Privacy Policy</h1><article>Privacy Policy
-Version: 2026-10-21.1 · Effective: 2026-10-21
+Version: 2026-10-22.1 · Effective: 2026-10-22
 DRAFT · Operator and service details must be finalized before public account services.
 
 1. Controller and contacts
@@ -8,20 +8,20 @@ Privacy officer or responsible team: 김성우
 Privacy contact: grow29971@gmail.com
 Support: grow29971@gmail.com
 
-2. Local information
-Progress, currency, equipment, settings, terms version, acceptance time and age declaration are stored on this device. Web play uses browser storage. Local progress is not automatically synchronized to a cloud. If you join co-op play, character, equipment, progression profile and network information are sent to the chosen host for that session. The game does not ask for a date of birth or national ID as age verification.
+2. Local information and optional multiplayer
+Progress, currency, equipment, settings, terms version, acceptance time and age declaration are stored on this device; web play uses browser storage. Local progress is not automatically cloud-synchronized. Joining co-op, PVP or a raid by room code sends your nickname, character, equipment, progression profile, combat input and results through the Supabase relay to that room's participants and host. The host uses this information to resolve combat. Lobbies and ordinary dungeons are private by default; only an explicitly joined battle is shared. The game does not collect a birth date or national ID for identity verification.
 
 3. Account sign-in
 Purposes: distinguish accounts, manage sign-in/sessions, account rights requests and consent records.
-Actual data: 선택한 Google·카카오 계정의 식별자·이메일·이름/닉네임·프로필 사진 URL·검증 상태 또는 Apple 계정의 앱별 식별자·공유 이메일(가리기 선택 시 중계 이메일)·검증 상태, 널시티 사용자 ID·로그인 시각·동의 기록, 게임에서 정한 닉네임과 전체 채팅에 보낸 메시지·전송 시각. iPhone 기본 Apple 로그인에서는 이메일만 요청합니다. 소셜 계정 비밀번호는 게임이 수집하지 않습니다.. Document versions, acceptance times and choices are also linked to the authenticated account.
-Retention: 서버 인증 계정은 계정 삭제 요청 처리 시까지 보관합니다. 액세스 토큰은 실행 중 메모리에 두고, 자동 로그인용 갱신 토큰은 Android Keystore·iOS Keychain·Windows DPAPI 또는 웹 브라우저의 같은 출처 저장소에 보관하며 기기의 로그아웃 시 삭제합니다. 전체 채팅은 최근 1,000건까지 보관하고 최근 100건을 조회하며 계정 삭제 시 해당 계정 메시지도 삭제합니다. 공급자 운영 로그와 백업은 각 공급자의 보관 정책을 따릅니다.
+Actual data: 선택한 Google·카카오 계정의 식별자·이메일·이름/닉네임·프로필 사진 URL·검증 상태 또는 Apple 계정의 앱별 식별자·공유 이메일(가리기 선택 시 중계 이메일)·검증 상태, 널시티 사용자 ID·로그인 시각·동의 기록, 게임에서 정한 닉네임과 전체 채팅에 보낸 메시지·전송 시각. iPhone 기본 Apple 로그인에서는 이메일만 요청합니다. 소셜 계정 비밀번호는 게임이 수집하지 않습니다. 선택한 온라인 방의 생성·참가 기록, 닉네임·캐릭터·장비·진행 프로필·전투 입력과 결과가 온라인 중계에 사용됩니다. 신고·차단을 이용하면 관련 계정 식별자·메시지·사유·접수/검토 기록을 처리합니다.. Document versions, acceptance times and choices are also linked to the authenticated account.
+Retention: 인증 계정은 계정 삭제 시까지 보관합니다. 토큰은 기기의 안전한 저장소 또는 같은 출처 브라우저 저장소에 두며 로그아웃·탈퇴 시 지웁니다. 채팅은 최근 1,000건까지 30일 동안, 신고는 접수 후 30일 동안 보관한 후 정기 파기합니다. 차단 설정은 해제 또는 탈퇴까지, 채팅 제한은 설정 만료까지 유지합니다. 방 메타데이터는 종료·이탈·접속 만료 시 정리하며 중계 전투 패킷은 게임 DB의 영구 기록으로 저장하지 않습니다. 공급자 로그·백업의 처리 조건은 별도 안내를 따릅니다.
 Separate consent is requested for account-data processing. You may refuse; account sign-in will not proceed, but guest play remains available. The game does not store provider passwords. Access tokens stay in memory; refresh tokens for automatic sign-in are stored on the device or browser and removed when signing out. Temporary browser PKCE data is cleared on return or cancellation. Signing out does not delete information held by the provider or authentication server.
 
-4. Chat and connection information
-World chat stores your account-linked game nickname, messages and message times in the game's Supabase chat database and shows them to other signed-in players. It keeps up to 1,000 recent messages and loads the latest 100. Deleting an account also deletes its chat messages. Per-account send intervals limit spam. It writes no separate authentication-token file logs. Hosting/access logs: 웹과 인증 서비스는 IP·요청 시각·경로·사용자 에이전트 등 접속·운영 로그를 처리할 수 있습니다. Supabase 문서상 코어 인증·DB는 선택한 서울 리전에 있고 운영 로그는 EU에서 처리됩니다. Pro의 대시보드 로그 열람 범위 7일은 전체 로그의 삭제 보장 기간이 아닙니다. 세부 처리국가·로그·백업 파기 조건은 일반 이용자 공개 전 확정합니다.
+4. Chat, reports, blocks and access information
+Game nicknames, chat text and sending times are stored on the server and displayed to signed-in users. Chat retains up to the latest 1,000 messages for 30 days, with scheduled expiry cleanup; clients fetch the latest 100. Reports contain the reporter and reported account IDs, relevant message and nickname, reason, submission time and review outcome, retained for 30 days after submission before scheduled cleanup. Reports are not public. Block preferences remain until unblocked or the account is deleted. Chat restrictions apply until their recorded expiry. Account deletion also removes that account's messages, reports, blocks and restrictions. Other devices update displayed records on their next fetch; copies independently saved by another user cannot be recalled. Sending and reporting are rate-limited. Hosting/access logs: 웹과 인증 서비스는 IP·요청 시각·경로·사용자 에이전트 등 접속·운영 로그를 처리할 수 있습니다. Supabase 문서상 코어 인증·DB는 선택한 서울 리전에 있고 운영 로그는 EU에서 처리됩니다. Pro의 대시보드 로그 열람 범위 7일은 전체 로그의 삭제 보장 기간이 아닙니다. 세부 처리국가·로그·백업 파기 조건은 일반 이용자 공개 전 확정합니다.
 
 5. Processors, recipients and overseas processing
-Processors and duties: Supabase Pte. Ltd.: 계정 인증·DB·전체 채팅, AWS 서울(ap-northeast-2). Supabase, Inc.: 필요한 경우 운영·지원. Google LLC: 선택한 Google 계정 인증. 주식회사 카카오: 선택한 카카오계정 인증. Apple 및 해당 개인정보 처리방침상 계열사: 선택한 Apple 계정 인증·보안. Vercel Inc.: 웹 미리보기 제공.
+Processors and duties: Supabase Pte. Ltd.: 계정 인증·DB·전체 채팅·신고/차단·온라인 전투 중계, AWS 서울(ap-northeast-2). Supabase, Inc.: 필요한 경우 운영·지원. Google LLC: 선택한 Google 계정 인증. 주식회사 카카오: 선택한 카카오계정 인증. Apple 및 해당 개인정보 처리방침상 계열사: 선택한 Apple 계정 인증·보안. Vercel Inc.: 웹 미리보기 제공.
 The game currently does not share data with third parties for marketing. See sections 2 and 4 for public chat and data sent to your chosen co-op host. Overseas processing: Recipient: Apple 및 Apple 개인정보 처리방침상 해당 계열사
 Contact: https://www.apple.com/legal/privacy/data/en/sign-in-with-apple/ / https://www.apple.com/legal/privacy/contact/
 Country: 미국 및 Apple 개인정보 처리방침상 처리 지역. 최종 처리 주체·이전 국가는 일반 공개 전 추가 확인
@@ -34,8 +34,8 @@ Refusal route: Apple 계정 연결을 거부하거나 Apple 계정 설정에서 
 Recipient: Supabase Pte. Ltd. / Supabase, Inc.
 Contact: https://supabase.com/legal/privacy-resources/data-residency-and-transfers-faq / privacy@supabase.io
 Country: 싱가포르·미국(운영·지원), 한국 서울(인증·DB), EU(운영 로그; 개별 국가와 지원 접근 위치는 일반 공개 전 추가 확인)
-Data: 계정 식별자·기본 프로필·이메일·세션·동의 기록·접속 로그·게임 닉네임·전체 채팅 메시지
-Purpose: 게임 계정 인증, 세션 관리, 전체 채팅, 서비스 보안·장애 대응
+Data: 계정 식별자·기본 프로필·이메일·세션·동의 기록·접속 로그·게임 닉네임·전체 채팅 메시지·신고/차단 기록·온라인 방 메타데이터·전투 프로필/입력/결과
+Purpose: 게임 계정 인증, 세션 관리, 전체 채팅, 서비스 보안·장애 대응·신고 검토·차단 적용·선택한 온라인 전투 중계
 Time/method: 로그인·갱신·로그아웃 및 서비스 접속 시 HTTPS 전송
 Retention: 계정 삭제 요청 처리 시까지. 채팅은 최근 1,000건까지 보관. 공급자 로그·백업은 별도의 보관·삭제 정책을 따름
 Refusal route: 동의하지 않으면 로그인과 게임 시작을 진행하지 않습니다. 테스트 계정 삭제·동의 철회 문의는 운영자 이메일로 접수합니다.
@@ -50,11 +50,11 @@ Retention: Google 계정 설정 및 Google 개인정보처리방침의 보유·�
 Refusal route: Google 계정 연결을 거부하거나 철회할 수 있으며 로그인과 게임 시작은 진행되지 않습니다.
 Your chosen account authentication and session management use the providers and authentication server described below. Overseas transfers based on consent require a separate choice from collection/use consent. Refusal prevents that account sign-in. Changes to processing details will update the notice and any required consent process.
 
-6. Deletion and your rights
-Data is deleted without undue delay when its purpose or retention period ends. Electronic records are deleted against practical recovery; printouts are destroyed. Any legally required retention must identify the data, reason and period and be kept separately. Request access, correction, deletion, suspension, consent withdrawal or account closure at grow29971@gmail.com. Only minimal identity/representative verification will be requested. Any lawful restriction must be explained with a review route. Unlinking a social provider alone does not complete deletion of operator-held information.
+6. Erasure and exercising rights
+Personal information is erased without undue delay when its purpose or retention period ends. Electronic records are deleted to prevent ordinary recovery; printed records are shredded. Any legally required separate retention must identify the data, legal basis and period. Signed-in users can choose Privacy &amp; Service Information → Permanently Delete Game Account. Completion is not shown before server deletion is confirmed. Access, correction, erasure, restriction, consent withdrawal and deletion requests when the app is unavailable can be sent to grow29971@gmail.com. Only necessary identity or representative authority verification is requested; limitations and appeal routes are explained. Unlinking a social provider alone does not erase the game server's data.
 
-7. Children and optional information
-The current service is for ages 14 and over. It does not intentionally collect under-14 data and will stop processing or delete it when identified. Serving children requires a separate verified parental-consent process. No marketing subscription, personalized-ad tracking, contacts, GPS, photo or microphone permission is currently requested. The service does not operate consequential automated decision-making or a pseudonymous-data analytics service.
+7. Age and optional advertising
+The current service is for ages 14 and above, subject to any higher official game rating. A checkbox does not replace legally required identity verification or guardian consent. If under-14 collection is identified, processing is stopped and appropriate erasure steps are taken. Services requiring statutory minor/guardian procedures are offered only after those procedures exist. Contacts, GPS, photo, microphone and marketing-subscription permissions are not requested. Rewarded advertising is optional; SDK ad requests are blocked until disclosures, consent and advertising configuration are ready. Advertising processing: 보상형 광고 준비 미완료로 광고 요청은 차단합니다. 활성화 시 Google Mobile Ads SDK가 IP 주소·기기/광고 식별자·광고 상호작용·진단 정보를 광고 제공·부정 사용 방지·성능 개선에 처리할 수 있습니다. 실제 처리 항목·이전 국가·보유 기간과 동의 설정을 확정한 뒤 제공합니다.. Non-personalized ads do not eliminate all device-data processing. The game does not offer significant automated decision-making or pseudonymized analytics.
 
 8. Storage, security and updates
 Clearing browser storage or resetting game data can delete local progress and is separate from server account deletion. Authentication uses HTTPS and PKCE. Public servers require appropriate access controls and secure storage/transport. Social providers and hosts also maintain their own cookie/privacy policies. Important changes to purposes, data, recipients or transfers will be announced before taking effect; new consent will be requested where required.
