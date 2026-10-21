@@ -11,7 +11,7 @@
       (url.searchParams.has('code') || url.searchParams.has('error') || hash.has('error') || implicit)) {
     returned = {
       query: url.search.slice(1),
-      error: hash.get('error') || (implicit ? 'unexpected_implicit_response' : ''),
+      error: hash.get('error_code') || hash.get('error') || (implicit ? 'unexpected_implicit_response' : ''),
       redirect: url.origin + url.pathname
     };
     for (const name of ['nc_state', 'code', 'error', 'error_code', 'error_description']) {
