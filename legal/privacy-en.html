@@ -13,17 +13,42 @@ Progress, currency, equipment, settings, terms version, acceptance time and age 
 
 3. Account sign-in
 Purposes: distinguish accounts, manage sign-in/sessions, account rights requests and consent records.
-Actual data: 선택한 Google·카카오 계정의 식별자·이메일·이름/닉네임·프로필 사진 URL·검증 상태 또는 Apple 계정의 앱별 식별자·공유 이메일(가리기 선택 시 중계 이메일)·검증 상태, 널시티 사용자 ID·로그인 시각·동의 기록. iPhone 기본 Apple 로그인에서는 이메일만 요청합니다. 소셜 계정 비밀번호는 게임이 수집하지 않습니다.. Document versions, acceptance times and choices are also linked to the authenticated account.
-Retention: 본인 계정의 비공개 테스트 종료 또는 계정 삭제 요청 처리 시까지 서버 인증 계정을 보관합니다. 앱의 액세스·갱신 토큰은 실행 중 메모리에만 두며 로그아웃 또는 종료 시 제거합니다. 공급자 운영 로그와 백업은 각 공급자의 보관 정책을 따릅니다. 일반 이용자 공개 전 보유·파기 조건을 별도로 확정합니다.
-Separate consent is requested for account-data processing. You may refuse; sign-in and game start will not proceed. The game does not store provider passwords. Access/refresh tokens stay in running memory; temporary browser PKCE data is cleared on return or cancellation. Signing out does not delete information held by the provider or authentication server.
+Actual data: 선택한 Google·카카오 계정의 식별자·이메일·이름/닉네임·프로필 사진 URL·검증 상태 또는 Apple 계정의 앱별 식별자·공유 이메일(가리기 선택 시 중계 이메일)·검증 상태, 널시티 사용자 ID·로그인 시각·동의 기록, 게임에서 정한 닉네임과 전체 채팅에 보낸 메시지·전송 시각. iPhone 기본 Apple 로그인에서는 이메일만 요청합니다. 소셜 계정 비밀번호는 게임이 수집하지 않습니다.. Document versions, acceptance times and choices are also linked to the authenticated account.
+Retention: 서버 인증 계정은 계정 삭제 요청 처리 시까지 보관합니다. 액세스 토큰은 실행 중 메모리에 두고, 자동 로그인용 갱신 토큰은 Android Keystore·iOS Keychain·Windows DPAPI 또는 웹 브라우저의 같은 출처 저장소에 보관하며 기기의 로그아웃 시 삭제합니다. 전체 채팅은 최근 1,000건까지 보관하고 최근 100건을 조회하며 계정 삭제 시 해당 계정 메시지도 삭제합니다. 공급자 운영 로그와 백업은 각 공급자의 보관 정책을 따릅니다.
+Separate consent is requested for account-data processing. You may refuse; sign-in and game start will not proceed. The game does not store provider passwords. Access tokens stay in memory; refresh tokens for automatic sign-in are stored on the device or browser and removed when signing out. Temporary browser PKCE data is cleared on return or cancellation. Signing out does not delete information held by the provider or authentication server.
 
 4. Chat and connection information
-Chat text, temporary sessions, server-generated nicknames and message times are processed by the relay and shown to other users. The current local relay keeps the last 100 messages in RAM until restart. Sessions idle for an hour and IP rate-limit records idle for one minute are removed on a subsequent request. It writes no separate chat-body or authentication-token logs. Real hosting/access-log fields and retention must be disclosed before a public relay is enabled. Hosting/access logs: 웹과 인증 서비스는 IP·요청 시각·경로·사용자 에이전트 등 접속·운영 로그를 처리할 수 있습니다. Supabase 문서상 코어 인증·DB는 선택한 서울 리전에 있고 운영 로그는 EU에서 처리됩니다. Pro의 대시보드 로그 열람 범위 7일은 전체 로그의 삭제 보장 기간이 아닙니다. 세부 처리국가·로그·백업 파기 조건은 일반 이용자 공개 전 확정합니다.
+World chat stores your account-linked game nickname, messages and message times in the game's Supabase chat database and shows them to other signed-in players. It keeps up to 1,000 recent messages and loads the latest 100. Deleting an account also deletes its chat messages. Per-account send intervals limit spam. It writes no separate authentication-token file logs. Hosting/access logs: 웹과 인증 서비스는 IP·요청 시각·경로·사용자 에이전트 등 접속·운영 로그를 처리할 수 있습니다. Supabase 문서상 코어 인증·DB는 선택한 서울 리전에 있고 운영 로그는 EU에서 처리됩니다. Pro의 대시보드 로그 열람 범위 7일은 전체 로그의 삭제 보장 기간이 아닙니다. 세부 처리국가·로그·백업 파기 조건은 일반 이용자 공개 전 확정합니다.
 
 5. Processors, recipients and overseas processing
-Processors and duties: Supabase Pte. Ltd.: 계정 인증·DB, AWS 서울(ap-northeast-2). Supabase, Inc.: 필요한 경우 운영·지원. Google LLC: 선택한 Google 계정 인증. 주식회사 카카오: 선택한 카카오계정 인증. Apple 및 해당 개인정보 처리방침상 계열사: 선택한 Apple 계정 인증·보안. Vercel Inc.: 웹 미리보기 제공. 현재 신규 계정 가입을 서버에서 차단하고 이미 등록된 본인 계정만 테스트합니다.
-The game currently does not share data with third parties for marketing. See sections 2 and 4 for public chat and data sent to your chosen co-op host. Overseas processing: Not yet specified
-Public account services and public chat remain disabled until actual processing locations and lawful grounds are confirmed. The current private functionality test blocks new signups and permits only a registered developer account. Overseas transfers based on consent require separate consent. If another permitted ground applies, such as necessary contract-related processing/storage, that ground and the required details must be disclosed.
+Processors and duties: Supabase Pte. Ltd.: 계정 인증·DB·전체 채팅, AWS 서울(ap-northeast-2). Supabase, Inc.: 필요한 경우 운영·지원. Google LLC: 선택한 Google 계정 인증. 주식회사 카카오: 선택한 카카오계정 인증. Apple 및 해당 개인정보 처리방침상 계열사: 선택한 Apple 계정 인증·보안. Vercel Inc.: 웹 미리보기 제공.
+The game currently does not share data with third parties for marketing. See sections 2 and 4 for public chat and data sent to your chosen co-op host. Overseas processing: Recipient: Apple 및 Apple 개인정보 처리방침상 해당 계열사
+Contact: https://www.apple.com/legal/privacy/data/en/sign-in-with-apple/ / https://www.apple.com/legal/privacy/contact/
+Country: 미국 및 Apple 개인정보 처리방침상 처리 지역. 최종 처리 주체·이전 국가는 일반 공개 전 추가 확인
+Data: Apple 로그인 요청·앱별 식별자·공유 또는 중계 이메일·검증 정보. Apple은 계정·기기 정보를 인증과 부정 사용 방지에 처리할 수 있음
+Purpose: 선택한 Apple 계정 인증·부정 사용 방지·서비스 보안
+Time/method: Apple 로그인 시 HTTPS 인증 화면 또는 iOS AuthenticationServices 이용
+Retention: Apple의 서비스별 개인정보 안내와 개인정보 처리방침상 필요한 기간. 구체적인 보관·파기 조건은 일반 공개 전 추가 확인
+Refusal route: Apple 계정 연결을 거부하거나 Apple 계정 설정에서 연결을 중단할 수 있습니다. 동의하지 않으면 해당 방식의 로그인은 진행되지 않습니다.
+
+Recipient: Supabase Pte. Ltd. / Supabase, Inc.
+Contact: https://supabase.com/legal/privacy-resources/data-residency-and-transfers-faq / privacy@supabase.io
+Country: 싱가포르·미국(운영·지원), 한국 서울(인증·DB), EU(운영 로그; 개별 국가와 지원 접근 위치는 일반 공개 전 추가 확인)
+Data: 계정 식별자·기본 프로필·이메일·세션·동의 기록·접속 로그·게임 닉네임·전체 채팅 메시지
+Purpose: 게임 계정 인증, 세션 관리, 전체 채팅, 서비스 보안·장애 대응
+Time/method: 로그인·갱신·로그아웃 및 서비스 접속 시 HTTPS 전송
+Retention: 계정 삭제 요청 처리 시까지. 채팅은 최근 1,000건까지 보관. 공급자 로그·백업은 별도의 보관·삭제 정책을 따름
+Refusal route: 동의하지 않으면 로그인과 게임 시작을 진행하지 않습니다. 테스트 계정 삭제·동의 철회 문의는 운영자 이메일로 접수합니다.
+
+Recipient: Google LLC
+Contact: https://policies.google.com/privacy?hl=ko
+Country: 미국 및 Google 개인정보처리방침에 기재된 전 세계 처리 지역
+Data: Google 로그인 요청, 계정 선택, 기본 프로필·이메일 제공 동의, 인증·보안 관련 접속 정보
+Purpose: 선택한 Google 계정의 본인 인증
+Time/method: Google 로그인 시 Google HTTPS 인증 화면 또는 Android Credential Manager 이용
+Retention: Google 계정 설정 및 Google 개인정보처리방침의 보유·삭제 정책에 따름
+Refusal route: Google 계정 연결을 거부하거나 철회할 수 있으며 로그인과 게임 시작은 진행되지 않습니다.
+Your chosen account authentication and session management use the providers and authentication server described below. Overseas transfers based on consent require a separate choice from collection/use consent. Refusal prevents that account sign-in. Changes to processing details will update the notice and any required consent process.
 
 6. Deletion and your rights
 Data is deleted without undue delay when its purpose or retention period ends. Electronic records are deleted against practical recovery; printouts are destroyed. Any legally required retention must identify the data, reason and period and be kept separately. Request access, correction, deletion, suspension, consent withdrawal or account closure at grow29971@gmail.com. Only minimal identity/representative verification will be requested. Any lawful restriction must be explained with a review route. Unlinking a social provider alone does not complete deletion of operator-held information.
